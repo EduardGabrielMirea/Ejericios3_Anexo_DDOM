@@ -12,44 +12,51 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Crear el primer párrafo
         var parrafo = document.createElement("p");
-        parrafo.textContent = "Este es mi primer párrafo";
+        var texto = document.createTextNode("Este es el primer párrafo");
+        parrafo.appendChild(texto);
         container.appendChild(parrafo);
 
         // Botón para añadir nuevo párrafo
         var btnAnadir = document.createElement("button");
-        btnAnadir.textContent = "Añadir nuevo párrafo";
         btnAnadir.id = "anadir";
+        var textoBtnAnadir = document.createTextNode("Añadir párrafo");
+        btnAnadir.appendChild(textoBtnAnadir);
         container.appendChild(btnAnadir);
 
         // Acción del botón para añadir un nuevo párrafo
         btnAnadir.addEventListener("click", function () {
             var nuevoParrafo = document.createElement("p");
-            nuevoParrafo.textContent = "Este es un nuevo párrafo añadido";
+            var textoNuevoParrafo = document.createTextNode("Este es un nuevo párrafo añadido")
+            nuevoParrafo.appendChild(textoNuevoParrafo);
             container.appendChild(nuevoParrafo);
         });
 
         // Botón para insertar un nuevo párrafo antes del primer párrafo
         var btnInsertar = document.createElement("button");
-        btnInsertar.textContent = "Insertar nuevo párrafo";
+        var  textoBtnInsertar = document.createTextNode("Insertar párrafo antes del primero");
         btnInsertar.id = "insertar";
+        btnInsertar.appendChild(textoBtnInsertar);
         container.appendChild(btnInsertar);
 
         // Acción del botón para insertar un nuevo párrafo antes del primer párrafo
         btnInsertar.addEventListener("click", function () {
             var nuevoParrafo = document.createElement("p");
-            nuevoParrafo.textContent = "Este es un párrafo insertado al principio";
+            var textoNuevoParrafo  = document.createTextNode("Este es un nuevo párrafo insertado antes del primero");
+            nuevoParrafo.appendChild(textoNuevoParrafo);
             container.insertBefore(nuevoParrafo, container.firstChild);
         });
 
         // Botón para reemplazar el primer párrafo
         var btnReemplazar = document.createElement("button");
-        btnReemplazar.textContent = "Reemplazar párrafo";
+        var textoBtnReemplazar = document.createTextNode("Reemplazar el primer párrafo");
+        btnReemplazar.appendChild(textoBtnReemplazar);
         container.appendChild(btnReemplazar);
 
         // Acción del botón para reemplazar el primer párrafo
         btnReemplazar.addEventListener("click", function () {
             var nuevoParrafo = document.createElement("p");
-            nuevoParrafo.textContent = "Este párrafo reemplaza el primero";
+            var textoNuevoParrafo =  document.createTextNode("Este es el nuevo párrafo que reemplaza al primero");
+            nuevoParrafo.appendChild(textoNuevoParrafo);
             if (container.firstChild) {
                 container.replaceChild(nuevoParrafo, container.firstChild);
             }
@@ -57,7 +64,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Botón para borrar el último párrafo
         var btnBorrar = document.createElement("button");
-        btnBorrar.textContent = "Borrar párrafo";
+        var textoBtnBorrar = document.createTextNode("Borrar el último párrafo");
+        btnBorrar.appendChild(textoBtnBorrar);
         container.appendChild(btnBorrar);
 
         // Acción del botón para borrar el último párrafo
