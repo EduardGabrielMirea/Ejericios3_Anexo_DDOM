@@ -1,5 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
+  //Ejercicio 1
+  
     var ejercicio1 = document.getElementById("ejericio1");
+    var borrarEjercicio1 = document.getElementById("ejericio1_borrar");
+
 
     ejercicio1.addEventListener("click", function () {
         var container = document.createElement("div");
@@ -74,7 +78,17 @@ document.addEventListener("DOMContentLoaded", function () {
             document.body.appendChild(clon); // Inserta el clon en el body
         });
 
-        // Deshabilitar el botón inicial una vez que ha sido pulsado
-        ejercicio1.disabled = true;
+       
     });
+
+    borrarEjercicio1.addEventListener("click",function () {
+        var btnClear = document.createElement("button");
+        btnClear.textContent = "Borrar todo";
+        container.appendChild(btnClear);
+        btnClear.addEventListener("click", function () {
+            document.body.removeChild(container); // Elimina el contenedor del cuerpo
+        });
+    });
+
+    //Ejericio 2
 });
